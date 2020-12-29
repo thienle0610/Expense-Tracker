@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="font-weight: 400; font-size: 70px">Expense Tracker</h1>
+        <h4
+          style="
+            color: #2ecc71;
+            font-weight: 400;
+            font-size: 40px;
+            margin-top: 20px;
+          "
+        >
+          Add A New Item:
+        </h4>
+      </div>
+
+      <div class="form">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12">
+              <label style="font-size: 20px; font-weight: 400;" for="name">Name:</label>
+              <input type="text" id="name" class="form-control" />
+              <div class="clear"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6">
+              <label style="font-size: 20px; font-weight: 400;" for="date">Date:</label>
+              <input type="date" id="date" class="form-control" />
+              <div class="clear"></div>
+            </div>
+
+            <div class="col-md-6">
+              <label style="font-size: 20px; font-weight: 400;" for="amount">Amount:</label>
+              <input type="number" id="amount" class="form-control" />
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col-md-12 text-center">
+                    <div class="bttn">
+                        <button style="padding: 10px 20px; font-size: 15px; border-radius: 10px; margin: 30px 0; background-color: #2ecc71; color: #fff;" id="submit" class="btn" onclick="add()">Add Expense</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td><strong>Date</strong></td>
+                    <td><strong>Amount</strong></td>
+                    <td> </td>
+                </tr>
+            </thead>
+
+            <tbody class="bodyTable">
+                <tr class="table-row">
+                    <td colspan="4">No expense is added yet!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
